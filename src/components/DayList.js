@@ -1,4 +1,5 @@
 import React from 'react';
+import Day from './Day';
 
 const marketSchedule = [  
   {  
@@ -40,11 +41,18 @@ const marketSchedule = [
 ];
 
 
-function DayControl() {
+function DayList() {
   return (
     <>
+    {marketSchedule.map((day, index) =>
+      <Day day={day.day}
+        location={day.location}
+        hours={day.hours}
+        booth={day.booth}
+        key={index}/>
+    )}
     </>
   )
 }
 
-export default DayControl;
+export default DayList;

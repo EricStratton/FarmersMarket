@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Day(props) {
   return (
@@ -12,8 +13,8 @@ function Day(props) {
 }
 
 Day.propTypes = {
-  day: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
+  day: PropTypes.string,
+  location: PropTypes.string,
   hours: PropTypes.string,
   booth: PropTypes.string
 };
