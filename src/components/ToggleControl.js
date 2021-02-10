@@ -23,16 +23,16 @@ class ToggleControl extends React.Component {
     let currentlyVisibleState = null;
     let textButton = null;
     if (this.state.listVisibleOnPage) {
-      currentlyVisibleState = <DayList />;
+      currentlyVisibleState = <div class="row" style={{padding: '30px'}}><DayList /></div>
       textButton = "Seaonal Produce";
     } else {
-      currentlyVisibleState = <MonthList />;
-      textButton = "Daily Schedule";
+      currentlyVisibleState = <div class="row" style={{padding: '30px'}}><MonthList /></div>
+      textButton = "Daily Schedule"; 
     }
     return (
       <>
-        {currentlyVisibleState}
-        <button onClick = {this.handleClick}>{textButton}</button>
+      <button id="btn" onClick = {this.handleClick}>{textButton}</button>
+      {currentlyVisibleState}
       </>
     );
   }

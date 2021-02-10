@@ -45,11 +45,11 @@ function DayList() {
   return (
     <>
     {marketSchedule.map((day, index) =>
-      <Day day={day.day}
+      <div class="col-3"><Day day={day.day}
         location={day.location}
         hours={day.hours}
         booth={day.booth}
-        key={index}/>
+        key={index}/></div>
     )}
     </>
   )

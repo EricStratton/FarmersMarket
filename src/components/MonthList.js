@@ -275,11 +275,11 @@ function MonthList() {
   return (
     <>
     {availableProduce.map((month, index) =>
-      <Month 
+      <div class="col-3"><Month 
 			month={month.month}
       selection={month.selection.map((item, index) =>
           <li>{item}</li>
-        )}/>
+        )}/></div>
     )}
     </>
   );
